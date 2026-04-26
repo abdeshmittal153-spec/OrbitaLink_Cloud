@@ -1,0 +1,15 @@
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+  engineType = "accelerate"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int   @id @default(autoincrement())
+  satids    String[]
+}
