@@ -1,9 +1,9 @@
 import express from "express";
-const http = require("http");
-const { Server } = require("socket.io");
-const cors = require("cors");
-const { PrismaClient } = require("@prisma/client");
-const { v4: uuidv4 } = require("uuid");
+import http from "http";    
+import { Server } from "socket.io";
+import cors from "cors";
+import { PrismaClient } from "@prisma/client";
+import { v4 as uuidv4 } from "uuid";
 
 const prisma = new PrismaClient();
 const app = express();
